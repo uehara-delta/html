@@ -1,0 +1,326 @@
+@charset "UTF-8";
+/*======================================================================
+  Default Reset & Base Style Sheet
+  Author and Copyright
+    Author: LH3 Studio (http://lh3.jp)
+    Created: 2011-05-01
+    Modified: 2011-05-30
+    Licence: Creative Commons Attribution-ShareAlike 3.0 Unported
+             (http://creativecommons.org/licenses/by-sa/3.0/deed.ja)
+  0. for HTML5
+  1-1. YUI 2: Fonts CSS
+  1-2. Universal selector
+  1-3. Structure Module
+  1-4. Text Module
+  1-5. Hypertext Module
+  1-6. List Module
+  1-7. Edit Module
+  1-8. Forms Module
+  1-9. Tables Module
+  1-10. Image Module
+  1-11. Object Module
+======================================================================*/
+/*----------------------------------------------------------------------
+  0. for HTML5
+    ブラウザは不明な要素を display: inline として解釈する。
+    HTML5で新たに定義された要素を古いブラウザで用いる場合
+    ・新たに定義された要素に対してdisplay: blockを指定
+    ・HTMLのhead要素でのhttp://html5shiv.googlecode.com/svn/trunk/html5.jsの参照
+    を行うこと。
+    なお、これについてはオライリー・ジャパン「入門HTML5」48ページ～51ページが詳しい。
+----------------------------------------------------------------------*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+/*----------------------------------------------------------------------
+  1-1. YUI 2: Fonts CSS
+    Copyright (c) 2011, Yahoo! Inc.
+    All rights reserved.
+    http://developer.yahoo.com/yui/license.html
+----------------------------------------------------------------------*/
+body {
+    font-size: 13px;
+    *font-size: small;
+    *font: x-small;
+}
+table {
+    font-size: inherit;
+    font: 100%;
+}
+select,
+input,
+textarea {
+    font-size: 99%;
+}
+/*----------------------------------------------------------------------
+  1-2. Universal selector
+----------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    font-size: 100%;
+    font-weight: normal;
+    font-style: normal;
+}
+/*----------------------------------------------------------------------
+  1-3. Structure Module
+----------------------------------------------------------------------*/
+body {
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*----------------------------------------------------------------------
+  1-4. Text Module
+----------------------------------------------------------------------*/
+p,
+pre,
+address,
+cite {
+    margin: 0.5em 20px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0.5em 20px;
+}
+h1 {
+    font-size: 189%;
+}
+h2 {
+    font-size: 159%;
+}
+h3 {
+    font-size: 144%;
+}
+h4 {
+    font-size: 122%;
+}
+h5 {
+    font-size: 107%;
+}
+h6 {
+    font-size: 107%;
+}
+pre {
+    padding: 0.5em 10px;
+    border: 3px solid #eee;
+    width: auto;
+    _width: 95%;
+    overflow: scroll;
+    color: #3d4263;
+    font-family: "Osaka−等幅", Osaka-mono, monospace;
+}
+pre[title]:before {
+    margin-bottom: 0.4em;
+    padding: 0 10px;
+    display: block;
+    content: attr(title);
+    color: black;
+    background-color: #eee;
+}
+blockquote {
+    margin: 1.5em 20px 1.5em 40px;
+    padding: 1px;
+    background-color: #eee;
+}
+blockquote * {
+    color: #888;
+}
+blockquote[title]:before {
+    margin: 2px;
+    padding: 0.1em 16px;
+    display: block;
+    content: attr(title);
+    background-color: #fff;
+}
+blockquote[cite]:after {
+    padding: 0.1em 20px;
+    display: block;
+    content: attr(cite);
+    color: #333;
+    text-align: right;
+}
+cite {
+    display: block;
+    color: #333;
+    text-aligh: right;
+}
+em {
+    font-style: normal;
+    font-weight: bold;
+}
+strong {
+    color: #ff4500;
+}
+code {
+    font-family: "Osaka−等幅", Osaka-mono, monospace;
+}
+abbr,
+acronym {
+    border-bottom: 1px dotted #aaa;
+    cursor: help;
+}
+kbd {
+    border: 1px solid #ccc;
+    padding: 0 0.3em;
+    background-color: #f5f5f5;
+    font-family: "Osaka−等幅", Osaka-mono, monospace;
+    text-transform: uppercase;
+}
+/*----------------------------------------------------------------------
+  1-5. Hypertext Module
+----------------------------------------------------------------------*/
+a:link {
+    color: #005585;
+}
+a:visited {
+    color: #485270;
+}
+a:hover {
+    color: #b83800;
+}
+/*----------------------------------------------------------------------
+  1-6. List Module
+----------------------------------------------------------------------*/
+ul,
+ol,
+dl {
+    margin: 1em 20px;
+    padding: 1px 10px;
+    list-style-position: inside;
+}
+li,
+dt,
+dd {
+    font-size: 100%;
+}
+dt {
+}
+dd {
+    color: #666;
+}
+li li,
+li p,
+li pre,
+li dt,
+li dd,
+dd li,
+dd p,
+dd pre,
+dd dt,
+dd dd {
+    font-size: 100%;
+}
+li ul,
+li ol,
+li dl,
+li p,
+dd ul,
+dd ol,
+dd dl,
+dd p {
+    margin: 0 10px;
+}
+/*----------------------------------------------------------------------
+  1-7. Edit Module
+----------------------------------------------------------------------*/
+del {
+    color: #666;
+    text-decoration: line-through;
+}
+del[datetime]:bofore {
+    content: "\00ff08"attr(datetime)"\00524a\009664\00ff09";
+}
+ins {
+    border-bottom: 1px dotted #ccc;
+    text-decoration: none;
+}
+ins[datetime]:before {
+    content: "\00ff08"attr(datetime)"\004fee\006b63\00ff09";
+}
+/*----------------------------------------------------------------------
+  1-8. Forms Module
+----------------------------------------------------------------------*/
+form {
+    margin: 0.5em 20px;
+    padding: 1px 0;
+}
+form dl,
+form p {
+    margin: 0.5em 10px;
+}
+fieldset {
+    border: 1px solid #ddd;
+}
+legend {
+    margin: 0 1em;
+    padding: 0 10px;
+}
+input,
+textarea {
+    padding: 0.1em 10px;
+    border: 1px solid #ddd;
+    font-family: Arial, Helvetica, "ヒラギノ角ゴ Pro W3", sans-serif;
+    background-color: #f5f5f5;
+}
+input {
+    line-height: 1.2;
+}
+input:hover,
+textarea:hover {
+    border: 1p solid #aaa;
+}
+input:focus,
+textarea:focus {
+    border: 1px solid #000;
+}
+textarea {
+    padding: 0.4em 8px;
+}
+table {
+    margin: 0 20px 0.5em 20px;
+    border: 1px solid #aaa;
+    background-color: #eee;
+}
+th,
+td {
+    padding: 0 10px;
+}
+th {
+    color: #fff;
+    background-color: #999;
+}
+td {
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+/*----------------------------------------------------------------------
+  1-10. Image Module
+----------------------------------------------------------------------*/
+a img {
+    border: 3px solid #ccc;
+}
+a:hover img {
+    border: 3px solid #bccd56;
+}
+/*----------------------------------------------------------------------
+  1-11. Object Module
+----------------------------------------------------------------------*/
+object, embed {
+    margin: 1em 20px;
+}
